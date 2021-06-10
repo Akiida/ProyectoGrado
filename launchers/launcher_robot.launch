@@ -1,0 +1,10 @@
+<launch>
+
+  <node pkg="robot" type="controlador.py" name="controlador"/>
+  <node pkg="robot" type="odometria.py" name="odometria"/>
+  <node pkg="robot_setup_tf" type="tf_broadcaster" name="tf_broadcaster"/>
+
+
+</launch>
+
+

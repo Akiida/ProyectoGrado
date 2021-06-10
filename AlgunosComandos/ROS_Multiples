@@ -1,0 +1,14 @@
+gedit .bashrc
+
+local host
+
+export ROS_MASTER_URI=http://localhost:11311/
+export ROS_HOSTNAME=192.168.0.171
+export ROS_IP=192.168.0.171
+
+
+
+esclavo
+export ROS_MASTER_URI=http://192.168.0.171:11311/
+export ROS_HOSTNAME=192.168.0.120
+export ROS_IP=192.168.0.120

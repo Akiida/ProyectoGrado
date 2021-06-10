@@ -1,0 +1,55 @@
+Sweep Comandos
+
+git clone https://github.com/jetsonhacks/installSweep
+
+cd installSweep
+
+./installSweepSDK.sh
+
+cd ~/sweep-sdk
+
+cd libsweep
+
+cd build
+
+./sweep-ctl
+
+--- lsusb -> mirar USB, Future Technology Devices International
+dmesg --follow  , ttyUSB0, SerialNumber: DM00KQ8U
+
+
+
+installSweep --> 99serialRUles , SerialNUmber
+
+
+New Terminal---------
+cd installSweep
+sudo cp 99-usb-serial.rules /etc/udev/rules.d
+ls -l /dev/sweep, SALE ESTO: lrwxrwxrwx 1 root root 7 feb 21 18:39 /dev/sweep -> ttyUSB0
+
+
+Retomando_Terminal----
+
+./sweep-ctl
+
+Permisos:
+sudo chmod 777 /dev/ttyACM0
+
+./sweep-ctl /dev/sweep get motor_speed
+
+
+ROS:::Nuevo Terminal
+
+cd ~/installSweep/
+
+./installSweepROS.sh <Catkin_Workspace>
+./installSweepROS.sh ~/Sweep_ROS - en este caso..
+
+
+cd ~/Sweep_ROS
+source devel/setup.bash
+cd src/sweep-ros/launch
+
+gedit sweep2scan.launch  -> dev/ttl to /dev/sweep
+
+roslaunch sweep_ros launcher

@@ -1,0 +1,22 @@
+sudo apt-get install ros-kinetic-rgbd-launch ros-kinetic-openni2-camera ros-kinetic-openni2-launch
+
+roslaunch openni2_launch openni2.launch
+
+sudo apt-get install ros-kinetic-rtabmap-ros
+
+---Launch launcher remote
+roslaunch freenect_throttle.launch rate:=5
+
+
+--Launch from source
+roslaunch rtabmap_ros rtabmap.launch subscribe_rgbd:=true rgbd_topic:=/camera/rgbd_image compressed:=true visual_odometry:=false odom_topic:=/odom rtabmap_args:="--delete_db_on_start" queue_size:=30
+
+roslaunch rtabmap_ros rtabmap.launch subscribe_rgbd:=true rgbd_topic:=/camera/rgbd_image compressed:=true rtabmap_args:="--delete_db_on_start" queue_size:=30
+
+rosrun gmapping slam_gmapping scan:=scan _odom_frame:=odom _base_frame:=base_link _map_frame:=map
+
+rosrun hector_mapping hector_mapping 
+
+
+
+roslaunch rtabmap_ros rtabmap.launch rtabmap_args:="--delete_db_on_start"

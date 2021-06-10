@@ -1,0 +1,23 @@
+Comandos GIT
+
+git init --> inicializar o reinicializar
+
+git clone -b branchName URL
+
+git status 
+
+git add .  
+
+git commit --> "guardar cambios"
+
+git remote add origin hhto....... --> añadir el repositorio
+
+git push origin .... -> actualizar repositorio
+
+git pull origin ..... -> actualizar local
+
+git remote remove origin
+
+
+///esto nop
+jstest-gtk

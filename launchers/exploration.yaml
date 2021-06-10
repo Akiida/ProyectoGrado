@@ -1,0 +1,11 @@
+robot_base_frame: base_link
+track_unknown_space: true
+costmap_topic: /move_base/global_costmap/costmap
+visualize: false
+planner_frequency: 0.33
+progress_timeout: 30.0
+potential_scale: 1
+orientation_scale: 0.0
+gain_scale: 1
+transform_tolerance: 0.3
+min_frontier_size: 0.1

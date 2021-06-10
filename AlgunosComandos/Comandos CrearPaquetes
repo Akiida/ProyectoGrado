@@ -1,0 +1,30 @@
+Creacion Workspace, paquete y nodo - Pyhton
+
+mkdir prueba ---Crear carpeta llamada prueba
+
+cd prueba --ir al directorio
+
+mkdir src --crear el src
+cd src - ir al directorio
+
+catkin_init_workspace --inicializar workspace
+
+
+catkin_create_pkg mytest roscpp rospy std_msgs --> crear paquete mytest
+cd mytest
+cd src --> Nodos
+
+sudo chmod +x publisher.py -> agregar exepcion
+
+
+desde el folder prueba --> catkin_make
+
+
+source devel/setup.bash 
+
+rosrun _paquete_ _nodo_
+
+
+
+
+
